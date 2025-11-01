@@ -13,4 +13,8 @@ class Shape:
     def y(self) -> float:
         return self._y
     
+    def translate(self, dx: float, dy: float) -> None:
+        if not isinstance(dx, (int, float)) or not isinstance(dy, (int, float)):
+            raise TypeError ('Translation must be numeric values')
+        
     
