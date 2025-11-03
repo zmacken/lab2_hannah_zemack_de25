@@ -19,8 +19,11 @@ class Shape: #this class is to define x and y to set the center of the object fo
         self._x += dx #add old value to new point
         self._y += dy
 
+    #Lägga till någon operator overload som kan jämföra area (eller ska denna kanske vara i de andra klasserna)
+
     def __repr__(self):
         return f'Shape(x = {self._x}, y = {self._y})'
     
+    #lägga till __Str__
 
     
