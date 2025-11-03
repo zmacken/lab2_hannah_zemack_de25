@@ -29,7 +29,11 @@ class Circle(Shape):
         else:
             return False
     
-    
+    def is_unit_circle(self):
+        if self._x==0 and self._y==0 and self._r==1:
+            return True
+        else:
+            return False
     
     def __repr__(self):
         base = super().__repr__()
