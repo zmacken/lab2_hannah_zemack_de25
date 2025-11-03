@@ -35,6 +35,6 @@ class Rectangle(Shape):
         
     def __repr__(self):
         base = super().__repr__()
-        return f'{base[:-1]}, width = {self._w}, height = {self._h}'
+        return f'{base[:-1]}, width = {self._w}, height = {self._h})'
     
 

@@ -28,8 +28,9 @@ class Circle(Shape):
             return True
         else:
             return False
-        
+    
+    
     
     def __repr__(self):
         base = super().__repr__()
-        return f'{base[:-1]}, radius = {self._r}'
+        return f'{base[:-1]}, radius = {self._r})'
