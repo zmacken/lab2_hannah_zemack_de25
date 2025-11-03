@@ -24,4 +24,7 @@ class Rectangle(Shape):
     def perimeter(self) -> float:
         return (2* self._w) + (2* self._h)
     
+    def __repr__(self):
+        base = super().__repr__()
+        return f'{base[:-1]}, width = {self._w}, height = {self._h}'
     
