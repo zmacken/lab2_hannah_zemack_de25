@@ -19,6 +19,9 @@ class Shape:
         self._x += dx #add old value to new point
         self._y += dy
 
+    def __repr__(self):
+        return f'Shape(x = {self._x}, y = {self._y})'
+    
     
 
     
