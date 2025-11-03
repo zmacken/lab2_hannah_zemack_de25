@@ -37,6 +37,24 @@ class Shape(ABC): #this class is to define x and y to set the center of the obje
             return True
         else:
             return False
+    
+    def __le__(self, other):
+        if self.area <= other.area:
+            return True
+        else:
+            return False
+
+    def __gt__(self, other):
+        if self.area > other.area:
+            return True
+        else:
+            return False
+    
+    def __ge__(self, other):
+        if self.area >= other.area:
+            return True
+        else:
+            return False
 
     #Lägga till någon operator overload som kan jämföra area (eller ska denna kanske vara i de andra klasserna)
 
