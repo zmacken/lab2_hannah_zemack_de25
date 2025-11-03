@@ -1,28 +1,28 @@
 from shape import Shape
 
 class Rectangle(Shape):
-    def __init__(self, x, y, w, h):
+    def __init__(self, x, y, width, height):
         super().__init__(x, y)
-        if not isinstance(w, (int,float)) or not isinstance(h, (int, float)):
+        if not isinstance(width, (int,float)) or not isinstance(height, (int, float)):
             raise TypeError ('height and widht must be a numeric value')
-        self._w = w
-        self._h= h
+        self._width = width
+        self._height= height
     
     @property
     def w(self):
-        return self._w
+        return self._width
     
     @property
     def h(self):
-        return self._h
+        return self._height
     
     @property
     def area(self) -> float:
-        return self._w * self._h
+        return self._width * self._height
     
     @property
     def perimeter(self) -> float:
-        return (2* self._w) + (2* self._h)
+        return (2* self._width) + (2* self._height)
     
     def __eq__(self, other):
         if not isinstance(other, Rectangle):
@@ -34,13 +34,13 @@ class Rectangle(Shape):
             return False
         
     def is_square(self):
-        if self._w == self._h:
+        if self._width == self._height:
             return True
         else:
             return False
         
     def __repr__(self):
         base = super().__repr__()
-        return f'{base[:-1]}, width = {self._w}, height = {self._h})'
+        return f'{base[:-1]}, width = {self._width}, height = {self._height})'
     
 
