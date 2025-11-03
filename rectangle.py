@@ -1,5 +1,4 @@
 from shape import Shape
-import math
 
 class Rectangle(Shape):
     def __init__(self, x, y, w, h):
