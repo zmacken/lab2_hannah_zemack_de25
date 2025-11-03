@@ -23,5 +23,4 @@ class Shape: #this class is to define x and y to set the center of the object fo
         return f'Shape(x = {self._x}, y = {self._y})'
     
 
-
     
