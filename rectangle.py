@@ -24,6 +24,16 @@ class Rectangle(Shape):
     def perimeter(self) -> float:
         return (2* self._w) + (2* self._h)
     
+    def __eq__(self, other):
+        if not isinstance(other, Rectangle):
+            return False
+        
+        if self.area == other.area and self.perimeter == other.perimeter:
+            return True
+        else:
+            return False
+        
+    
     def __repr__(self):
         base = super().__repr__()
         return f'{base[:-1]}, width = {self._w}, height = {self._h}'
