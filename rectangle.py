@@ -33,7 +33,7 @@ class Rectangle(Shape):
         else:
             return False
         
-    def is_cube(self):
+    def is_square(self):
         if self._w == self._h:
             return True
         else:
