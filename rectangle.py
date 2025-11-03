@@ -19,4 +19,6 @@ class Rectangle(Shape):
     
     @property
     def area(self) -> float:
-        return 
+        return self._w * self._h
+    
+    
