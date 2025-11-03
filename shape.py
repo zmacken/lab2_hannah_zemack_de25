@@ -1,3 +1,5 @@
+from circle import Circle
+
 class Shape: #this class is to define x and y to set the center of the object for both circle and rectangle
     def __init__(self, x, y): 
         if not isinstance(x, (int, float)) or not isinstance (y, (int, float)): #error handling, making sure only numeriva values
@@ -18,7 +20,7 @@ class Shape: #this class is to define x and y to set the center of the object fo
         if not isinstance(dx, (int, float)) or not isinstance(dy, (int, float)):
             raise TypeError ('Translation must be numeric values')
         self._x += dx #add old value to new point
-        self._y += dy
+        self._y += dy 
 
     #Lägga till någon operator overload som kan jämföra area (eller ska denna kanske vara i de andra klasserna)
 
