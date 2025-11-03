@@ -16,4 +16,8 @@ class Circle(Shape):
     def area(self) -> float:
         return math.pi * self._r**2 
     
-    #vad är en perimeter och ska det också in här.
+    @property
+    def perimeter(self) -> float:
+        return 2 * self._r *math.pi
+    
+    

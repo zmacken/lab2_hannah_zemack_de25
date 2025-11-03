@@ -21,4 +21,7 @@ class Rectangle(Shape):
     def area(self) -> float:
         return self._w * self._h
     
+    @property
+    def perimeter(self) -> float:
+        return (2* self._w) + (2* self._h)
     
