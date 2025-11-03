@@ -13,8 +13,12 @@ class Shape:
     def y(self) -> float:
         return self._y
     
-    def translate(self, dx: float, dy: float) -> None:
+    def translate(self, dx: float, dy: float) -> None: #this function is for translating the x and y points so that you can move the center
         if not isinstance(dx, (int, float)) or not isinstance(dy, (int, float)):
             raise TypeError ('Translation must be numeric values')
-        
+        self._x += dx #add old value to new point
+        self._y += dy
+
+    
+
     
