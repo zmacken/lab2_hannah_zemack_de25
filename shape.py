@@ -1,4 +1,4 @@
-class Shape:
+class Shape: #this class is to define x and y to set the center of the object for both circle and rectangle
     def __init__(self, x, y): 
         if not isinstance(x, (int, float)) or not isinstance (y, (int, float)): #error handling, making sure only numeriva values
             raise TypeError ('x and y must be numeric values')
@@ -22,6 +22,6 @@ class Shape:
     def __repr__(self):
         return f'Shape(x = {self._x}, y = {self._y})'
     
-    
+
 
     
