@@ -13,6 +13,7 @@ class Shape: #this class is to define x and y to set the center of the object fo
     def y(self) -> float:
         return self._y
     
+    #måste testa när plotta
     def translate(self, dx: float, dy: float) -> None: #this function is for translating the x and y points so that you can move the center
         if not isinstance(dx, (int, float)) or not isinstance(dy, (int, float)):
             raise TypeError ('Translation must be numeric values')

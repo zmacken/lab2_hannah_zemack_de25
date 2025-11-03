@@ -20,4 +20,6 @@ class Circle(Shape):
     def perimeter(self) -> float:
         return 2 * self._r *math.pi
     
-    
+    def __repr__(self):
+        base = super().__repr__()
+        return f'{base[:-1]}, radius = {self._r}'
