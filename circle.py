@@ -3,7 +3,7 @@ import math
 
 class Circle(Shape): #define a circle class that inherits from shape
     def __init__(self, x, y, radius): 
-        super().__init__(x, y) #bring x and y from shapes
+        super().__init__(x, y) #inherit x and y attributes
         if not isinstance(radius, (int, float)): #error handling for radius
             raise TypeError('radius must be a numerical value')
         self._radius = radius #store radius as a private attribute
