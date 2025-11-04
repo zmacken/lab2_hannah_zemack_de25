@@ -9,6 +9,11 @@ def test_circle_area():
 
 def test_greater_than():
     r = 1
+    c1 = Circle(0,0,r)
+    c2 = Circle(0, 0, r*2)
+    assert c1 > c2
+
+
 
 # print(circle1 == circle2)  # True
 # print(circle2 == rectangle)  # False
