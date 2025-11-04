@@ -1,4 +1,5 @@
 from shape import Shape
+import matplotlib.patches as patches
 
 class Rectangle(Shape): #define a rectangle class that inherits from shape
     def __init__(self, x, y, width, height):
@@ -38,6 +39,18 @@ class Rectangle(Shape): #define a rectangle class that inherits from shape
             return True
         else:
             return False
+        
+    def draw(self, ax):
+        lower_left_x = self.x - self.width / 2
+        lower_left_y = self.y - self.height / 2
+        rect_patch = patches.Rectangle(
+            (lower_left_x, lower_left_y),
+            self.width,
+            self.height,
+            edgecolor='red',
+            facecolor='none'
+        )
+        ax.add_patch(rect_patch)
         
     def __repr__(self): #override repr
         base = super().__repr__()
