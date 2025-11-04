@@ -15,13 +15,12 @@ class Shape(): #define an base class calles shapes
     
     @property
     def area(self):
-        pass # must be implemented by subclasses to return area
+        raise NotImplementedError ('subclass must have implemented area')
 
     @property
     def perimeter(self):
-        pass # must be implemented by subclasses to return perimeter
+        raise NotImplementedError ('subclass must have implemented perimeter')
     
-
     def translate(self, dx: float, dy: float) -> None: 
         if not isinstance(dx, (int, float)) or not isinstance(dy, (int, float)): #validate that dx and dy are numbers
             raise TypeError ('Translation must be numeric values')
