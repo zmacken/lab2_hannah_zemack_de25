@@ -1,5 +1,6 @@
 from shape import Shape
 import math
+import matplotlib.patches as patches
 
 class Circle(Shape): #define a circle class that inherits from shape
     def __init__(self, x, y, radius): 
@@ -34,6 +35,16 @@ class Circle(Shape): #define a circle class that inherits from shape
             return True
         else:
             return False
+        
+    def draw(self, ax):
+
+        circle_patch = patches.Circle(
+            (self.x, self.y),
+            self.radius,
+            edgecolor='blue',
+            facecolor='none'
+        )
+        ax.add_patch(circle_patch)
     
     def __repr__(self): #override __repr__
         base = super().__repr__()
