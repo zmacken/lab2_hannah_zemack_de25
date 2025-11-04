@@ -1,10 +1,19 @@
 import matplotlib.pyplot as plt
-from matplotlib.patches import Circle as mplCircle, Rectangle as mplRectangle
+from shape import Shape
 
 class Shape2Dplotter: #define a class to use for 2d plotting
-    def __init__(self): #initialize an empty list to store shapes
-        self.shapes = [] #list to hold all shapes
-    
-    def add_shapes(self, shape): #function to add to list shapes
-        self.shapes.append(shape) #add to list shapes
-    
+    def __init__(self):
+        self.shapes = []  # Lista för figurer
+
+    def add_shape(self, shape: Shape):
+        if not isinstance(shape, Shape):
+            raise TypeError("Only Shape instances can be added.")
+        self.shapes.append(shape)
+
+    def plot(self):
+        fig, ax = plt.subplots()
+        for shape in self.shapes:
+            shape.draw(ax)  # Varje figur vet själv hur den ska ritas
+        ax.set_aspect('equal')
+        ax.autoscale_view()
+        plt.show()

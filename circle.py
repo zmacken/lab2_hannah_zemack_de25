@@ -37,12 +37,9 @@ class Circle(Shape): #define a circle class that inherits from shape
             return False
         
     def draw(self, ax):
-
         circle_patch = patches.Circle(
             (self.x, self.y),
-            self.radius,
-            edgecolor='blue',
-            facecolor='none'
+            self.radius
         )
         ax.add_patch(circle_patch)
     

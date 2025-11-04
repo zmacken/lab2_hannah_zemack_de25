@@ -46,9 +46,7 @@ class Rectangle(Shape): #define a rectangle class that inherits from shape
         rect_patch = patches.Rectangle(
             (lower_left_x, lower_left_y),
             self.width,
-            self.height,
-            edgecolor='red',
-            facecolor='none'
+            self.height
         )
         ax.add_patch(rect_patch)
         
