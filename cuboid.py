@@ -13,7 +13,7 @@ class Cuboid(Rectangle):
         return self._depth #read-only attribute
     
     @property
-    def volume(self):
+    def area(self):
         return self._width * self._height * self._depth
 
     @property

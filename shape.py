@@ -1,5 +1,5 @@
 class Shape(): #define an base class calles shapes
-    def __init__(self, x, y): 
+    def __init__(self, x:float , y: float): 
         if not isinstance(x, (int, float)) or not isinstance (y, (int, float)):  #error handling check that x and y are numbers
             raise TypeError ('x and y must be numeric values')
         self._x = x #store x-coordinate as private attribute

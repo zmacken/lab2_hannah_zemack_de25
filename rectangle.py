@@ -2,7 +2,7 @@ from shape import Shape
 import matplotlib.patches as patches
 
 class Rectangle(Shape): #define a rectangle class that inherits from shape
-    def __init__(self, x, y, width, height):
+    def __init__(self, x, y, width: float, height: float):
         super().__init__(x, y) #inherit x and y attributes
         if not isinstance(width, (int,float)) or not isinstance(height, (int, float)): #error handling to check id w and h is numbers
             raise TypeError ('height and widht must be a numeric value')
