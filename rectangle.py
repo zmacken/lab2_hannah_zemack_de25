@@ -41,12 +41,12 @@ class Rectangle(Shape): #define a rectangle class that inherits from shape
             return False
         
     def draw(self, ax):
-        lower_left_x = self.x - self.width / 2
-        lower_left_y = self.y - self.height / 2
+        lower_left_x = self._x - self._width / 2
+        lower_left_y = self._y - self._height / 2
         rect_patch = patches.Rectangle(
             (lower_left_x, lower_left_y),
-            self.width,
-            self.height
+            self._width,
+            self._height
         )
         ax.add_patch(rect_patch)
         
