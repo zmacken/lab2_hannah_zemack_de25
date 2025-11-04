@@ -1,4 +1,4 @@
-class Shape(): #define an abstract base class calles shapes
+class Shape(): #define an base class calles shapes
     def __init__(self, x, y): 
         if not isinstance(x, (int, float)) or not isinstance (y, (int, float)):  #error handling check that x and y are numbers
             raise TypeError ('x and y must be numeric values')
@@ -15,11 +15,11 @@ class Shape(): #define an abstract base class calles shapes
     
     @property
     def area(self):
-        pass # Abstract property: must be implemented by subclasses to return area
+        pass # must be implemented by subclasses to return area
 
     @property
     def perimeter(self):
-        pass # Abstract property: must be implemented by subclasses to return perimeter
+        pass # must be implemented by subclasses to return perimeter
     
 
     def translate(self, dx: float, dy: float) -> None: 
