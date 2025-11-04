@@ -2,7 +2,7 @@ from shape import Shape
 import math
 
 class Sphere(Shape):
-    def __init__(self, x, y, radius: float):
+    def __init__(self, x = 0, y = 0, radius: float = 1):
         super().__init__(x, y)
         if not isinstance(radius, (int,float)): #error handling to check if side is number
             raise TypeError ('side must be a numeric value')
@@ -55,7 +55,7 @@ class Sphere(Shape):
         
     def __repr__(self): #override repr
         base = super().__repr__()
-        return f'{base[:-1]}, side: {self._side})'
+        return f'{base[:-1]}, radius: {self._radius})'
     
     def __str__(self) -> str: #override str
-        return f"Cube with center at ({self._x}, {self._y}), and side: {self._side}"
+        return f"Sphere with center at ({self._x}, {self._y}), and radius: {self._radius}"
