@@ -9,11 +9,11 @@ class Rectangle(Shape): #define a rectangle class that inherits from shape
         self._height= height #store height a private attribute
     
     @property
-    def w(self):
+    def width(self):
         return self._width #read-only access to width
     
     @property
-    def h(self):
+    def height(self):
         return self._height #read-only access to height
     
     @property
