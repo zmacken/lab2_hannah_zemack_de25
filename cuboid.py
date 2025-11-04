@@ -1,7 +1,7 @@
 from shape import Shape
 from rectangle import Rectangle
 
-class Cube(Rectangle):
+class Cuboid(Rectangle):
     def __init__(self, x, y, width, height, depth):
         super().__init__(x, y, width, height)
         if not isinstance(depth, (int,float)): #error handling to check id w and h is numbers

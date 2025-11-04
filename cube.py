@@ -23,3 +23,10 @@ class Cube(Shape):
             return True
         else:
             return False
+        
+    def __repr__(self): #override repr
+        base = super().__repr__()
+        return f'{base[:-1]}, side: {self._side})'
+    
+    def __str__(self) -> str: #override str
+        return f"Cube with center at ({self._x}, {self._y}), and side: {self._side}"

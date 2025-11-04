@@ -1,6 +1,4 @@
-from abc import ABC, abstractmethod
-
-class Shape(ABC): #define an abstract base class calles shapes
+class Shape(): #define an abstract base class calles shapes
     def __init__(self, x, y): 
         if not isinstance(x, (int, float)) or not isinstance (y, (int, float)):  #error handling check that x and y are numbers
             raise TypeError ('x and y must be numeric values')
@@ -16,12 +14,10 @@ class Shape(ABC): #define an abstract base class calles shapes
         return self._y #read-only access to y
     
     @property
-    @abstractmethod
     def area(self):
         pass # Abstract property: must be implemented by subclasses to return area
 
     @property
-    @abstractmethod
     def perimeter(self):
         pass # Abstract property: must be implemented by subclasses to return perimeter
     
