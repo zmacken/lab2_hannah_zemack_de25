@@ -3,17 +3,17 @@ from shape import Shape
 
 class Shape2Dplotter: #define a class to use for 2d plotting
     def __init__(self):
-        self.shapes = []  # Lista för figurer
+        self.shapes = []  # list to store added shapes
 
-    def add_shape(self, shape: Shape):
+    def add_shape(self, shape: Shape): #function to add to list shapes
         if not isinstance(shape, Shape):
             raise TypeError("Only Shape instances can be added.")
         self.shapes.append(shape)
 
     def plot(self):
-        fig, ax = plt.subplots()
-        for shape in self.shapes:
-            shape.draw(ax)  # Varje figur vet själv hur den ska ritas
-        ax.set_aspect('equal')
-        ax.autoscale_view()
-        plt.show()
+        fig, ax = plt.subplots() #create subplots
+        for shape in self.shapes: #
+            shape.draw(ax)  # every figure knows hoe to write it self
+        ax.set_aspect('equal') #equal scaling for x and y
+        ax.autoscale_view() #automatically adjust view to fit all shapes
+        plt.show() #display the plot window
