@@ -38,3 +38,6 @@ class Circle(Shape):
     def __repr__(self):
         base = super().__repr__()
         return f'{base[:-1]}, radius = {self._radius})'
+    
+    def __str__(self) -> str:
+        return f"Circle with center at ({self._x}, {self._y}) and radius {self._radius}"

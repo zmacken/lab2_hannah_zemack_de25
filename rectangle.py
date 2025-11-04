@@ -43,4 +43,8 @@ class Rectangle(Shape):
         base = super().__repr__()
         return f'{base[:-1]}, width = {self._width}, height = {self._height})'
     
+    def __str__(self) -> str:
+        return f"Rectangle with center at ({self._x}, {self._y}), width {self._width}, and height {self._height}"
+
+    
 

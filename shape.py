@@ -61,6 +61,8 @@ class Shape(ABC): #this class is to define x and y to set the center of the obje
     def __repr__(self):
         return f'Shape(x = {self._x}, y = {self._y})'
     
-    #lägga till __Str__
+
+    def __str__(self):
+        return f'Shape is centered at x:{self._x} and y:{self._y}'
 
     
