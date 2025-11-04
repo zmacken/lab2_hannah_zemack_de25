@@ -1,68 +1,68 @@
 from abc import ABC, abstractmethod
 
-class Shape(ABC): #this class is to define x and y to set the center of the object for both circle and rectangle
+class Shape(ABC): #define an abstract base class calles shapes
     def __init__(self, x, y): 
-        if not isinstance(x, (int, float)) or not isinstance (y, (int, float)): #error handling, making sure only numeriva values
+        if not isinstance(x, (int, float)) or not isinstance (y, (int, float)):  #error handling check that x and y are numbers
             raise TypeError ('x and y must be numeric values')
-        self._x = x 
-        self._y = y
+        self._x = x #store x-coordinate as private attribute
+        self._y = y #store y-coordinate as private attribute
 
-    @property #making them only read only
+    @property 
     def x(self) -> float:
-        return self._x 
+        return self._x  #read-only access to x
     
     @property
     def y(self) -> float:
-        return self._y
+        return self._y #read-only access to y
     
     @property
     @abstractmethod
     def area(self):
-        pass
+        pass # Abstract property: must be implemented by subclasses to return area
 
     @property
     @abstractmethod
     def perimeter(self):
-        pass
+        pass # Abstract property: must be implemented by subclasses to return perimeter
     
-    #måste testa när plotta
-    def translate(self, dx: float, dy: float) -> None: #this function is for translating the x and y points so that you can move the center
-        if not isinstance(dx, (int, float)) or not isinstance(dy, (int, float)):
+
+    def translate(self, dx: float, dy: float) -> None: 
+        if not isinstance(dx, (int, float)) or not isinstance(dy, (int, float)): #validate that dx and dy are numbers
             raise TypeError ('Translation must be numeric values')
-        self._x += dx #add old value to new point
-        self._y += dy
+        self._x += dx #store dy as private attribute
+        self._y += dy #store dx as private attribute
  
-    def __lt__(self, other):
+    #comaprison operators based on area
+    def __lt__(self, other): #less than
         if self.area < other.area:
             return True
         else:
             return False
     
-    def __le__(self, other):
+    def __le__(self, other): #less than or equal
         if self.area <= other.area:
             return True
         else:
             return False
 
-    def __gt__(self, other):
+    def __gt__(self, other): #greater than
         if self.area > other.area:
             return True
         else:
             return False
     
-    def __ge__(self, other):
+    def __ge__(self, other): #greater than or equal 
         if self.area >= other.area:
             return True
         else:
             return False
 
-    #Lägga till någon operator overload som kan jämföra area (eller ska denna kanske vara i de andra klasserna)
 
-    def __repr__(self):
+    def __repr__(self): #override repr
         return f'Shape(x = {self._x}, y = {self._y})'
     
 
-    def __str__(self):
+    def __str__(self): #override str
         return f'Shape is centered at x:{self._x} and y:{self._y}'
 
     
