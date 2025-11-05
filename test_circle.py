@@ -9,9 +9,34 @@ def test_circle_area():
 
 def test_greater_than():
     r = 1
+    c1 = Circle(0,0,r*2)
+    c2 = Circle(0, 0, r)
+    assert c1 > c2
+
+def test_less_than():
+    r = 1
     c1 = Circle(0,0,r)
     c2 = Circle(0, 0, r*2)
-    assert c1 > c2
+    assert c1 < c2
+
+def test_equal():
+    r=1
+    c1 = Circle (0,0,r)
+    c2 = Circle (0,0,r)
+    assert c1 == c2
+
+def test_less_or_equal():
+    r=1
+    c1 = Circle(0,0,r)
+    c2 = Circle(0,0,r)
+    assert c1<=c2
+
+def test_greater_or_equal():
+    r=1
+    c1 = Circle(0,0,r)
+    c2 = Circle(0,0,r)
+    assert c1>=c2
+
 
 
 
