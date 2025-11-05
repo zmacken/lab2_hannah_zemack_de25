@@ -37,6 +37,10 @@ def test_greater_or_equal():
     c2 = Circle(0,0,r)
     assert c1>=c2
 
+def test_translate():
+    r= 1
+    c1 = Circle(0,0,r)
+    
 
 
 
