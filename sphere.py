@@ -55,7 +55,7 @@ class Sphere(Shape):
         
     def __repr__(self): #override repr
         base = super().__repr__()
-        return f'{base[:-1]}, radius: {self._radius})'
+        return f'(Sphere) {base[6:-1]}, radius: {self._radius})'
     
     def __str__(self) -> str: #override str
         return f"Sphere with center at ({self._x}, {self._y}), and radius: {self._radius}"

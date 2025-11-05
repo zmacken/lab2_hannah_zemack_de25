@@ -55,7 +55,7 @@ class Rectangle(Shape): #define a rectangle class that inherits from shape
     
     def __repr__(self): #override repr
         base = super().__repr__()
-        return f'{base[:-1]}, width = {self._width}, height = {self._height})'
+        return f'(Rectangle) {base[6:-1]}, width = {self._width}, height = {self._height})'
     
     def __str__(self) -> str: #override str
         return f"Rectangle with center at ({self._x}, {self._y}), width {self._width}, and height {self._height}"

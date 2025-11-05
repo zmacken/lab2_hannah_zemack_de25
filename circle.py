@@ -47,7 +47,7 @@ class Circle(Shape): #define a circle class that inherits from shape
     
     def __repr__(self): #override __repr__
         base = super().__repr__()
-        return f'{base[:-1]}, radius = {self._radius})'
+        return f'(Circle) {base[6:-1]}, radius = {self._radius}'
     
     def __str__(self) -> str: #override __str__
         return f"Circle with center at ({self._x}, {self._y}) and radius {self._radius}"

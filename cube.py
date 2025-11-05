@@ -54,7 +54,7 @@ class Cube(Shape):
         
     def __repr__(self): #override repr
         base = super().__repr__()
-        return f'{base[:-1]}, side: {self._side})'
+        return f'(Cube) {base[6:-1]}, side: {self._side})'
     
     def __str__(self) -> str: #override str
         return f"Cube with center at ({self._x}, {self._y}), and side: {self._side}"
