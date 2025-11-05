@@ -40,5 +40,6 @@ def test_greater_or_equal_circle():
 def test_translate_circle():
     r= 1
     c1 = Circle(0,0,r)
-    assert c1.translate(1, 1)
+    c1.translate(1, 1)
+    assert c1.x == 1 and c1.y == 1
 

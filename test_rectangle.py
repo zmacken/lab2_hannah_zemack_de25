@@ -46,4 +46,5 @@ def test_translate_rectangle():
     w = 1
     h = 1
     r1 = Rectangle(0, 0, w, h)
-    assert r1.translate(1, 1)
+    r1.translate(1, 1)
+    assert r1.x == 1 and r1.y == 1
