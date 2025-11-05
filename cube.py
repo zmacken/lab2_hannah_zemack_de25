@@ -51,7 +51,7 @@ class Cube(Shape):
             return True
         else:
             return False
-        
+    
     def __repr__(self): #override repr
         base = super().__repr__()
         return f'(Cube) {base[6:-1]}, side: {self._side})'
