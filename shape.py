@@ -24,8 +24,8 @@ class Shape(): #define an base class calles shapes
     def translate(self, dx: float, dy: float) -> None: 
         if not isinstance(dx, (int, float)) or not isinstance(dy, (int, float)): #validate that dx and dy are numbers
             raise TypeError ('Translation must be numeric values')
-        self._x += dx #store dy as private attribute
-        self._y += dy #store dx as private attribute
+        self._x = dx #store dy as private attribute
+        self._y = dy #store dx as private attribute
  
     #comaprison operators based on area
     def __lt__(self, other): #less than
