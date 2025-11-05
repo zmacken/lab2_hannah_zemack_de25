@@ -11,7 +11,7 @@ class Shape2Dplotter: #define a class to use for 2d plotting
         self.shapes.append(shape)
 
     def plot(self):
-        fig, ax = plt.subplots() #create subplots
+        fig, ax = plt.subplots() #create subplots, fig needs to be there to access ax
         for shape in self.shapes: 
             shape.draw(ax)  # every figure knows how to write it self
         ax.set_aspect('equal') #equal scaling for x and y

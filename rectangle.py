@@ -46,9 +46,13 @@ class Rectangle(Shape): #define a rectangle class that inherits from shape
         rect_patch = patches.Rectangle(
             (lower_left_x, lower_left_y),
             self._width,
-            self._height
+            self._height,
+            edgecolor = 'red',
+            fill = False
         )
         ax.add_patch(rect_patch)
+
+    
         
     def __repr__(self): #override repr
         base = super().__repr__()
