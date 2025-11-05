@@ -5,7 +5,7 @@ class Rectangle(Shape): #define a rectangle class that inherits from shape
     def __init__(self, x = 0, y = 0 , width: float = 1, height: float= 1):
         super().__init__(x, y) #inherit x and y attributes
         if not isinstance(width, (int,float)) or not isinstance(height, (int, float)): #error handling to check id w and h is numbers
-            raise TypeError ('height and widht must be a numeric value')
+            raise TypeError ('height and width must be a numeric value')
         self._width = width #store width a private attribute
         self._height= height #store height a private attribute
     
