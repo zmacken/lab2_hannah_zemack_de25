@@ -53,7 +53,6 @@ class Rectangle(Shape): #define a rectangle class that inherits from shape
         ax.add_patch(rect_patch)
 
     
-        
     def __repr__(self): #override repr
         base = super().__repr__()
         return f'{base[:-1]}, width = {self._width}, height = {self._height})'
