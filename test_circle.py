@@ -25,7 +25,7 @@ def test_equal_circle():
     c2 = Circle (0,0,r)
     assert c1 == c2
 
-def test_less_or_equa_circlel():
+def test_less_or_equal_circlel():
     r=1
     c1 = Circle(0,0,r)
     c2 = Circle(0,0,r)
