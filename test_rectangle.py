@@ -1,7 +1,7 @@
 import pytest
 from rectangle import Rectangle
 
-def test_circle_area():
+def test_rectangle_area():
     w = 1
     h = 1
     r1 = Rectangle(0, 0, w, h)
