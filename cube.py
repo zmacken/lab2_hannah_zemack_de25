@@ -17,7 +17,7 @@ class Cube(Shape):
     
     @property
     def surface(self):
-        return (self._side * 2) * 6
+        return (self._side **2) * 6
     
     def __eq__(self, other):
         if not isinstance(other, Cube): #check if other object is cube

@@ -9,7 +9,7 @@ def test_cube_volume():
 def test_cube_surface():
     s =1 
     c = Cube(0,0,s)
-    assert c.surface == (s*2)*6
+    assert c.surface == (s**2)*6
 
 def test_greater_than_cube():
     s = 1
