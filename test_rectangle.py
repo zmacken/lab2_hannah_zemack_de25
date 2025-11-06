@@ -7,6 +7,12 @@ def test_rectangle_area():
     r1 = Rectangle(0, 0, w, h)
     assert r1.area == 1
 
+def test_perimeter_rectangle():
+    w = 1
+    h = 1
+    r1 = Rectangle(0, 0, w, h)
+    assert r1.perimeter == 4
+
 def test_greater_than_rectangle():
     w = 1
     h = 1
