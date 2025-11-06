@@ -7,6 +7,11 @@ def test_circle_area():
     c = Circle(0, 0, r)
     assert round(c.area) == round(math.pi * r**2)
 
+def test_perimeter_circle():
+    r = 1
+    c = Circle(0, 0, r)
+    assert round(c.perimeter) == round(2 * r *math.pi)
+
 def test_greater_than_circle():
     r = 1
     c1 = Circle(0,0,r*2)
